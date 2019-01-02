@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>复杂系统分析与控制研究中心非线性动力学与控制创新团队</title>
+<link rel="stylesheet" href="css/style1.css" type="text/css" media="all"/>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+//图片滚动 调用方法 imgscroll({speed: 30,amount: 1,dir: "up"});
+$.fn.imgscroll = function(o){
+	var defaults = {
+		speed: 40,
+		amount: 0,
+		width: 1,
+		dir: "left"
+	};
+	o = $.extend(defaults, o);
+	
+	return this.each(function(){
+		var _li = $("li", this);
+		_li.parent().parent().css({overflow: "hidden", position: "relative"}); //div
+		_li.parent().css({margin: "0", padding: "0", overflow: "hidden", position: "relative", "list-style": "none"}); //ul
+		_li.css({position: "relative", overflow: "hidden"}); //li
+		if(o.dir == "left") _li.css({float: "left"});
+		
+		//初始大小
+		var _li_size = 0;
+		for(var i=0; i<_li.size(); i++)
+			_li_size += o.dir == "left" ? _li.eq(i).outerWidth(true) : _li.eq(i).outerHeight(true);
+		
+		//循环所需要的元素
+		if(o.dir == "left") _li.parent().css({width: (_li_size*3)+"px"});
+		_li.parent().empty().append(_li.clone()).append(_li.clone()).append(_li.clone());
+		_li = $("li", this);
+
+		//滚动
+		var _li_scroll = 0;
+		function goto(){
+			_li_scroll += o.width;
+			if(_li_scroll > _li_size)
+			{
+				_li_scroll = 0;
+				_li.parent().css(o.dir == "left" ? { left : -_li_scroll } : { top : -_li_scroll });
+				_li_scroll += o.width;
+			}
+				_li.parent().animate(o.dir == "left" ? { left : -_li_scroll } : { top : -_li_scroll }, o.amount);
+		}
+		
+		//开始
+		var move = setInterval(function(){ goto(); }, o.speed);
+		_li.parent().hover(function(){
+			clearInterval(move);
+		},function(){
+			clearInterval(move);
+			move = setInterval(function(){ goto(); }, o.speed);
+		});
+	});
+};
+//友情链接下拉框跳转弹出新窗口
+function frlink(selObj){
+window.open(selObj.options[selObj.selectedIndex].value);}
+</script>
+</head>
+
+<body>
+<div id="hearder2" class="clearfix">
+	<div class="logo">
+   	  <img src="images/cqupt.jpg">
+  </div>
+  <div class="logo-name">复杂系统分析与控制研究中心非线性动力学与控制创新团队</div>
+  <div class="form-tools">
+   	  <form id="search" name="search" method="post">
+      	
+        
+  	  </form>
+    </div>
+</div>
+<div id="menu-box" class="clearfix">
+	<ul>
+    	<li><a href="index.html">首页</a></li>
+        <li><a href="detail1.html">中心概况</a></li>
+        <li><a href="list-pic1.html">师资队伍</a></li>
+        <li><a href="list-pic1.html">联系电话</a></li>
+    </ul>
+</div>
+<div id="slider-box" style="background:url(images/slider1.jpg) center center;"></div>
+<!-- index1-div1 -->
+<div id="index1-div1" class="clearfix">
+	<div class="index1-left675">
+    	<div class="title-box">中心简介<a href="detail1.html" class="title-more" title="查看更多"><img src="images/12.gif"></a></div>
+        <p><img src="images/p-img.jpg" align="left">重点实验室致力于基于仿生控制的智能机器人和其基础理论与关键技术的研究，形成了复杂系统理论与控制、仿生机器人运动控制、多智能体协作、信息物理系统、机器人应用等5个研究方向。现有科研骨干25人，其中教授11人，副教授11人，博士3人，省部级人才项目12人/次/项。
+代表性成果一：建立了系统稳定性与复杂行为控制理论，为仿生机器人、多智能体协作等奠定基础。成果被ESI收录6篇，含ESI Top 0.1% 热引1 篇。得到了哈佛大学等国际同行广泛引用，混沌理论奠基人APS会士Yorke肯定了本成果的难度；欧洲科学院院士Kurths、美国AMS、SIAM会士Kohn，俄国科学院院士Leonov等引用时称“成果显著”、“引人注意”，并多次向同行推荐，我国控制先驱廖晓昕教授认为本成果“在系统动态复杂性，特别是混沌不变集研究上，产生了重大基础作用和影响”。
+
+代表性成果二：提出多智能体系统分布式协作控制方法。创新以“盖邮戳”思想研究了通信时延对多智能体系统一致性影响问题；建立了基于事件驱动的多智能体系统一致性分布式控制理论；提出了分数阶混沌系统的函数投影同步法、不同系统同步法。工程技术上，特别是机器人协作、编队等技术难题上，上述成果得出的系列新算法，能有效避免机器人控制器需连续（或周期）更新及机器人之间的连续（或周期）通信。成果发表在TAC等顶级期刊，ESI Top 1%高被引4 篇，ESI Top 0.1% 热引1篇。得到世界控制学家、 IEEE Fellow FL Lewis教授、Xinghuo Yu教授、Zidong Wang教授等高度评价。
+
+代表性成果三：提出了一种全新的T型髋关节动力学行走模型和控制方法，突破了行走机器人的动平衡、高效率、低成本等系列关键技术，研制的“行者一号”步行机器人比同类的美国康奈尔大学“游侠”机器人效率更高，驱动电机减少2/3，重量减少1/2，成为人类历史上首个续航能力突破百公里的足式机器人。
+    </div>
+    
+</div>
+<!-- index1-div2 -->
+<div id="index1-div2" class="clearfix">
+	<div class="index1-left675">
+    	<div class="index1-li-box">
+    	<div class="index1-left330">
+        	<div class="title-box">创新成果<a href="list-text1.html" class="title-more" title="查看更多"><img src="images/12.gif"></a></div>
+            <img src="images/吉尼斯证书.jpg" style="width:330px; height:350px; margin:5px 0;">
+           
+        </div>
+        <div class="index1-right330">
+        	<div class="title-box">创新成果<a href="list-text1.html" class="title-more" title="查看更多"><img src="images/12.gif"></a></div>
+            <img src="images/设计机器人获得吉尼斯世界纪录.jpg" style="width:330px; height:340px; margin:5px 0;">
+            
+        </div>
+        </div>
+        <!-- slider -->
+        <div class="index1-pic-gun">
+        	<div class="title-box">团队建设<a href="list-pic1.html" class="title-more" title="查看更多"><img src="images/12.gif"></a></div>
+            <div class="index1-scrollleft clearfix">
+                <ul>
+                    <li>
+                        <a href="detail1.html"><img alt="部分专利" src="images/团队1.jpg" style="width: 211px;height: 161px;"/></a>
+                        <span>部分专利</span>
+                    </li>
+                    <li>
+                        <a href="detail1.html"><img alt="科技报告" src="images/团队2.jpg" style="width: 211px;height: 161px;"/></a>
+                        <span>科技报告</span>
+                    </li>
+                    <li>
+                        <a href="detail1.html"><img alt="部分论文" src="images/团队3.jpg" style="width: 211px;height: 161px;"/></a>
+                        <span>部分论文</span>
+                    </li>
+                    <li>
+                        <a href="detail1.html"><img alt="央视展示" src="images/团队4.jpg" style="width: 211px;height: 161px;"/></a>
+                        <span>央视展示</span>
+                    </li>
+                </ul>
+            </div>
+            <script type="text/javascript">
+            $(document).ready(function(){
+            
+                $(".index1-scrollleft").imgscroll({
+                    speed: 40,    //图片滚动速度
+                    amount: 0,    //图片滚动过渡时间
+                    width: 1,     //图片滚动步数
+                    dir: "left"   // "left" 或 "up" 向左或向上滚动
+                });
+                
+            });
+            </script>
+        </div>
+        <!-- slider end -->
+    </div>
+   
+</div>
+<!-- div5 -->
+<div id="div5" class="clearfix">
+    <div class="link-box">
+    	<span>友情链接：</span>
+        <select onChange="frlink(this)" name="select" class="select-link">
+            <option selected>--- 教育类网站 ---</option>
+            <option value="http://www.veryhuo.com">烈火网</option>
+            <option value="http://www.sina.com.cn">新浪网</option>
+            <option value="http://www.163.com">网易</option>
+        </select>
+        <select onChange="frlink(this)" name="select" class="select-link">
+            <option selected>--- 政府类网站 ---</option>
+            <option value="http://www.china.com">中华网</option>
+            <option value="http://www.sina.com.cn">新浪网</option>
+            <option value="http://www.163.com">网易</option>
+        </select>
+        <select onChange="frlink(this)" name="select" class="select-link">
+            <option selected>--- 校园类网站 ---</option>
+            <option value="http://www.veryhuo.com">烈火网</option>
+            <option value="http://www.sina.com.cn">新浪网</option>
+            <option value="http://www.163.com">网易</option>
+        </select>
+        <select onChange="frlink(this)" name="select" class="select-link">
+            <option selected>--- 其它类网站 ---</option>
+            <option value="http://www.veryhuo.com">烈火网</option>
+            <option value="http://www.sina.com.cn">新浪网</option>
+            <option value="http://www.163.com">网易</option>
+        </select>
+    </div>
+</div>
+<div id="div6">Copyright &copy; 2016 物理与核工程虚拟仿真教学中心 All rights reserved.更多模板：<a href="http://www.mycodes.net/" target="_blank">源码之家</a></div>
+</body>
+</html>
+
