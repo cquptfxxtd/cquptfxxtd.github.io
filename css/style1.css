@@ -12,9 +12,9 @@ a:hover { color:#0aa6d6; text-decoration:underline;}
 
 /********** index2 style start **********/
 #hearder2 { width:1000px; margin:0 auto;}
-#hearder2 .logo { width:260px; height:90px; float:left;}
-#hearder2 .logo img { width:260px; height:90px;}
-#hearder2 .logo-name { width:500px; height:90px; float:left; font-size:18px; font-weight:bold; color:#0aa6d6; line-height:90px; text-align:left;}
+#hearder2 .logo { width:90px; height:80px;float: left; }
+#hearder2 .logo img { width:90px; height:85px;}
+#hearder2 .logo-name { width:800px; height:90px; float: right; font-size:18px; font-weight:bold; color:#0aa6d6; line-height:90px; float: right;}
 #hearder2 .form-tools { height:90px; float:right;}
 #hearder2 .form-tools .tools-link { height:40px; line-height:40px; color:#0aa6d6; text-align:right; font-size:16px; padding-left:35px; background:url(../images/enter.png) left center no-repeat;}
 #hearder2 .form-tools .tools-link a { color:#0aa6d6; text-decoration:none;}
@@ -93,7 +93,7 @@ a:hover { color:#0aa6d6; text-decoration:underline;}
 #detail2-box .tabula-box ul li{ height:35px; padding-left:30px; line-height:35px; font-size:16px; border-bottom:1px dotted #ccc; background:url(../images/li2.png) left center no-repeat;}
 
 #detail2-box .content-box { width:695px; padding:0 20px; float:right;}
-#detail2-box .content-box .content { padding:0 0 20px 0; min-height:600px;}
+#detail2-box .content-box .content { padding:0 0 20px 0; min-height:600px;font-size:18px;}
 #detail2-box .content-box .content img,table,td { max-width:100%;}
 #detail2-box .content-box h1{ height:50px; line-height:50px; border-bottom:1px dotted #0aa6d6; font-size:16px; text-align:center; margin-bottom:30px;}
 #detail2-box .content-box .n-p-box{border-top:1px dotted #0aa6d6; font-size:14px;}
@@ -105,8 +105,8 @@ a:hover { color:#0aa6d6; text-decoration:underline;}
 #detail2-box .content-box li.text span { position:absolute; top:0; right:0; color:#bbb; font-size:12px;}
 #detail2-box .content-box h3 { line-height:30px; text-align:center;}
 #detail2-box .content-box li.pic{ width:225px; margin-left:10px; margin-bottom:20px; float:left;}
-#detail2-box .content-box li.pic .img-box{ width:203px; height:140px; margin-right:10px; padding:10px; border:1px solid #ccc; }
-#detail2-box .content-box li.pic .img-box img { width:203px; height:140px;}
+#detail2-box .content-box li.pic .img-box{ width:203px; height:200px; margin-right:10px; padding:10px; border:1px solid #ccc; }
+#detail2-box .content-box li.pic .img-box img { width:203px; height:200px;}
 
 
 
